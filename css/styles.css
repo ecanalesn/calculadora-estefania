@@ -1,0 +1,83 @@
+/* Estilo general para todos los elementos */
+* {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+/* Estilo para el cuerpo del documento */
+body {
+    margin: 0;
+    background-color: #cdb4db;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo para la calculadora */
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color: #b67bd7;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 10px 8px 10px 0px #4f017965;
+}
+
+/* Estilo para los botones */
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #b67bd7;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #b700ff1f;
+}
+
+/* Estilo para el estado activo de los botones */
+button:active {
+    background-color: #b061dd;
+}
+
+/* Estilo para el enfoque de los botones */
+button:focus {
+    outline: none;
+}
+
+/* Estilo para botones que ocupan dos columnas */
+.col-2 {
+    grid-column: span 2;    
+}
+
+/* Estilo para la sección de display de la calculadora */
+.display {
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+/* Estilo para el valor actual */
+#valor-actual {
+    font-size: 1.5em;
+}
+
+/* Estilo para el valor anterior */
+#valor-anterior {
+    font-size: 2em;
+}
